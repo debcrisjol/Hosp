@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\SessionGuard;
+use App\Models\User;
 class HomeController extends Controller
 {
     /**
@@ -14,6 +16,8 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+       
+        $user = \Auth::user();
     }
 
     /**
@@ -23,6 +27,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+
+       if(Auth::user()->usertype=='0')
+        {
+            return view ('home');
+        }
+        else{
+            return view('admin.home');
+        }
     }
 }
+
+
