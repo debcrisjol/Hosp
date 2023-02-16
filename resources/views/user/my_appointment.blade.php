@@ -30,7 +30,8 @@
           <div class="container text-center text-white wow zoomIn">
 
             <h1 class="display-4">Your Appointments</h1>
-            <span class="subhead">at Healthy Living Center</span>
+            <span class="subhead">at Healthy Living Center</span></div>
+            <div class="container text-center text-white">
             <table class="table m-3 ">
                 <thead>
                   <tr>
@@ -39,16 +40,18 @@
                     <th scope="col">Date</th>
                     <th scope="col">Message</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Cancel Appoitment</th>
                   </tr>
                 </thead>
                 <tbody>
                @foreach ($appoint as $appoints )
-                  <tr class="text-success text-capitalize font-weight-bold">
+                  <tr class="text-success text-capitalize font-weight-bold" align="center">
                     <th scope="row" class="text-danger">1</th>
                     <td>{{$appoints->doctor}}</td>
                     <td class="text-danger ">{{$appoints->date}}</td>
                     <td>{{$appoints->message}}</td>
                     <td class="text-dark">{{$appoints->status}}</td>
+                    <td class="text-dark"><a class="btn btn-danger" onclick="return confirm('are you sure to delete the appointment?')" href="{{url('cancel_appoint',$appoints->id)}}">Cancel</a></td>
 
                   </tr>
 

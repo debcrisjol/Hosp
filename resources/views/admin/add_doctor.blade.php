@@ -27,7 +27,7 @@
        @include('admin.navbar')
        <div class="container-fluid page-body-wrapper">
 
-<div class="container" style="padding-top:5%;" align="center">
+        <div class="container" style="padding-top:5%;" align="center">
 
 
     <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
@@ -77,7 +77,7 @@
     </form>
     @if(session()->has('message'))
     <div class="alert alert-success w-50">
-        <button type="button" class="btn-close" aria-label="Close" data-dismiss="alert">X</button>
+        <button type="button" class="btn-close" aria-label="Close" data-dismiss="alert"></button>
         {{ session()->get('message') }}
     </div>
     @endif

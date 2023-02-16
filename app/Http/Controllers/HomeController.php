@@ -85,5 +85,11 @@ if(Auth::id()){
         return redirect()->back();
     }
 }
+public function cancel_appoint($id){
+$data=Appointment::find($id);
+$data->delete();
+return redirect()->back();
+}
+
 
 }
