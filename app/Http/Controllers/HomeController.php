@@ -36,8 +36,8 @@ class HomeController extends Controller
 if(Auth::id()){
        if(Auth::user()->usertype=='0'){
         $doctor =Doctor::all();
-            // return view ('home');
-            return dd($doctor);
+            return view ('user.home',compact('doctor'));
+
         }
         else{
             return view('admin.home');
@@ -47,8 +47,14 @@ if(Auth::id()){
     }
 
     public function index(){
-         $doctor =Doctor::all();
-         return view('home',compact('doctor'));
+        if (Auth::id()){
+            return redirect('user.home');
+        }
+        else{
+            $doctor =Doctor::all();
+            return view('user.home',compact('doctor'));
+
+        }
 
 
     }

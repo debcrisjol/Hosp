@@ -8,15 +8,15 @@
         <div class="item">
           <div class="card-doctor">
             <div class="header">
-              <img src="../assets/img/doctors/doctor_1.jpg" alt="doctor-image">
+              <img src="doctorimage/{{$doctors->image}}" alt="doctor-image">
               <div class="meta">
                 <a href="#"><span class="mai-call"></span></a>
                 <a href="#"><span class="mai-logo-whatsapp"></span></a>
               </div>
             </div>
             <div class="body">
-              <p class="text-xl mb-0">{{ $doctors->name }}</p>
-              <span class="text-sm text-grey">{{ $doctors->speciality }}</span>
+              <p class="text-xl mb-0 fs-3 text-capitalize text-center">{{ $doctors->name }}</p>
+              <p class="text-sm text-grey text-capitalize text-center">{{ $doctors->speciality }}</p>
             </div>
           </div>
         </div>

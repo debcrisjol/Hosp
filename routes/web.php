@@ -14,16 +14,17 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
-Route::get('/','HomeController@index');
-// Route::get('/home', 'HomeController@redirect');
+Route::get('/home','HomeController@index');
+
 Auth::routes();
+
 Route::get('/home','HomeController@indexx');
 Route::get('/add_doctor_view','AdminController@addview');
-Route::POST('/upload_doctor','AdminController@upload');
+Route::post('/upload_doctor','AdminController@upload');
 
 
