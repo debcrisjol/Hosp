@@ -1,7 +1,7 @@
 <?php
-
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
+Route::get('/','HomeController@index');
+// Route::get('/home', 'HomeController@redirect');
+Auth::routes();
+Route::get('/home','HomeController@indexx');
+Route::get('/add_doctor_view','AdminController@addview');
+Route::POST('/upload_doctor','AdminController@upload');
 
-Route::get('/', 'HomeController@index');
-// Route::get('/','HomeController@index');
 

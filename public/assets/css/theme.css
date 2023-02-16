@@ -28,14 +28,16 @@ body {
 }
 
 a {
-  color: #fbff01;
+  color: #1c634a;
+  font-size: larger;
+
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #f8e518;
-  text-decoration: underline;
+  color: #06595f;
+ 
 }
 
 
@@ -65,7 +67,7 @@ a:hover {
 }
 
 a.bg-primary:hover, a.bg-primary:focus {
-  background-color: #b8d900 !important;
+  background-color: #00d982 !important;
 }
 
 .bg-accent {
