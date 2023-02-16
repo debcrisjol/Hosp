@@ -10640,7 +10640,7 @@ textarea.is-invalid.tt-hint {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  
+
   .btn-group-vertical > .btn,
   .fc .btn-group-vertical > button,
   .ajax-upload-dragdrop .btn-group-vertical > .ajax-file-upload,
@@ -10689,14 +10689,14 @@ textarea.is-invalid.tt-hint {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #0d6efd;
+  color: #d1fd0d;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .nav-link {
       transition: none; } }
   .nav-link:hover, .nav-link:focus {
-    color: #0a58ca; }
+    color: #67ca0a; }
   .nav-link.disabled {
     color: #6c757d;
     pointer-events: none;
@@ -10714,7 +10714,7 @@ textarea.is-invalid.tt-hint {
       border-color: #2c2e33 #2c2e33 #2c2e33;
       isolation: isolate; }
     .nav-tabs .nav-link.disabled {
-      color: #6c757d;
+      color: #8edf16;
       background-color: transparent;
       border-color: transparent; }
   .nav-tabs .nav-link.active,
@@ -10735,7 +10735,7 @@ textarea.is-invalid.tt-hint {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #0d6efd; }
+  background-color: #a6b8d2; }
 
 .nav-fill > .nav-link,
 .nav-fill .nav-item {

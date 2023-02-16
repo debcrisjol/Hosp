@@ -23,8 +23,9 @@ Route::get('/home','HomeController@index');
 
 Auth::routes();
 
-Route::get('/home','HomeController@indexx');
+Route::get('/home','HomeController@indexx')->name('home');
 Route::get('/add_doctor_view','AdminController@addview');
 Route::post('/upload_doctor','AdminController@upload');
-
+Route::post('/appointment','HomeController@appointment');
+Route::get('/myappointment','HomeController@myappointment');
 

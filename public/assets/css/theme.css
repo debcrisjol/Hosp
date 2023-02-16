@@ -79,11 +79,11 @@ a.bg-accent:hover, a.bg-accent:focus {
 }
 
 .bg-secondary {
-  background-color: #4E5AFE !important;
+  background-color: #a6abeb !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus {
-  background-color: #3d49f0 !important;
+  background-color: #696a7d !important;
 }
 
 .bg-success {
@@ -314,13 +314,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 .btn-secondary {
   color: #fff;
-  background-color: #4E5AFE;
+  background-color: #a1a4d0;
   border-color: transparent;
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #3d49f0;
+  background-color: #85858f;
   border-color: transparent;
 }
 
@@ -328,7 +328,7 @@ a.text-dark:hover, a.text-dark:focus {
 .show > .btn-secondary.dropdown-toggle {
   color: #fff;
   background-color: #4E5AFE;
-  border-color: #3d49f0;
+  border-color: #353643;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,

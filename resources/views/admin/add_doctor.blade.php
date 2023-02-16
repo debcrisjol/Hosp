@@ -76,8 +76,8 @@
 
     </form>
     @if(session()->has('message'))
-    <div class="alert alert-primary w-50">
-        <button type="button" class="btn-close" aria-label="Close" data-dismiss="alert"></button>
+    <div class="alert alert-success w-50">
+        <button type="button" class="btn-close" aria-label="Close" data-dismiss="alert">X</button>
         {{ session()->get('message') }}
     </div>
     @endif

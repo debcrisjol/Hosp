@@ -24,5 +24,11 @@
 
 @include('components.navbar')
 </header>
+@if(session()->has('message'))
+<div class="alert alert-success text-center w-100">
+    <button type="button" class="btn-close" aria-label="Close" data-dismiss="alert"> X </button>
+    {{ session()->get('message') }}
+</div>
+@endif
 @include('components.body')
 @include('components.footer')

@@ -6,7 +6,7 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">Covid19</a>
+                <a class="bg-success" href="#">Covid19</a>
               </div>
               <a href="blog-details.html" class="post-thumb">
                 <img src="../assets/img/blog/blog_1.jpg" alt="">
@@ -30,7 +30,7 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">Covid19</a>
+                <a class="bg-success" href="#">Covid19</a>
               </div>
               <a href="blog-details.html" class="post-thumb">
                 <img src="../assets/img/blog/blog_2.jpg" alt="">
@@ -54,7 +54,7 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">Covid19</a>
+                <a class="bg-success" href="#">Covid19</a>
               </div>
               <a href="blog-details.html" class="post-thumb">
                 <img src="../assets/img/blog/blog_3.jpg" alt="">

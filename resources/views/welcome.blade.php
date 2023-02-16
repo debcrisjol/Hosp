@@ -39,11 +39,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupport">
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="index.html">Home</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
@@ -56,12 +57,15 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
+
             <li class="nav-item">
+
                 <div class="flex-center position-ref full-height">
                     @if (Route::has('login'))
                         <div class="top-right links m-2">
                             @auth
                                 <a class="p-2 rounded bg-success " href="{{ url('/home') }}">Home</a>
+
                             @else
                                 <a class="p-2 rounded bg-success " href="{{ route('login') }}">Login</a>
 
@@ -81,8 +85,8 @@
   <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg.jpg);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">Let's make your life happier</span>
-        <h1 class="display-4">Healthy Living</h1>
+        <span class="subhead">Let's make your life happier...We do more then you can imagine</span>
+        <h1 class="display-4">Healthy,Strong and Happy </h1>
         <a href="#" class="btn btn-primary">Let's Consult</a>
       </div>
     </div>
