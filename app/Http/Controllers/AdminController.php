@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Appointment;
-use Illuminate\Http\Request;
-use App\Doctor;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Doctor;
+use App\Appointment;
 class AdminController extends Controller
 {
     public function addview()
@@ -81,5 +82,30 @@ class AdminController extends Controller
         $doctor->save();
         return redirect()->back()->with('message','Doctor Details updated ');
     }
+    public function homeadmin(){
+        if(Auth::id()){
+            if(Auth::user()->usertype=='1'){
+                $doctors =Doctor::all();
+                $otherdata=Appointment::all();
+                $data=Doctor::all();
 
+                return view('admin.body')->with(compact('doctors','otherdata','data'));
+             }
+
+         else if (Auth::user()->usertype=='0'){
+            $doctors =Doctor::all();
+
+
+            return view('user.home')->with(compact('doctors'));
+         }
+         else{
+            return view ('welcome');
+         }
+
+
+
+
+        }
+    }
 }
+

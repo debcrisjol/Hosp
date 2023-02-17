@@ -36,8 +36,8 @@ class HomeController extends Controller
 
 if(Auth::id()){
        if(Auth::user()->usertype=='0'){
-        $doctor =Doctor::all();
-            return view ('user.home',compact('doctor'));
+        $doctors =Doctor::all();
+            return view ('user.home',compact('doctors'));
 
         }
         else{
@@ -48,17 +48,13 @@ if(Auth::id()){
     }
 
     public function index(){
-        if (Auth::id()){
-            return redirect('user.home');
-        }
-        else{
-            $doctor =Doctor::all();
-            return view('user.home',compact('doctor'));
+            $doctors =Doctor::all();
+            return view('user.home',compact('doctors'));
 
         }
 
 
-    }
+
     public function appointment(Request $request){
         $data= new Appointment;
         $data->name=$request->name;
@@ -90,6 +86,20 @@ $data=Appointment::find($id);
 $data->delete();
 return redirect()->back();
 }
+
+public function aboutus(){
+    $doctors =Doctor::all();
+    return view('aboutus',compact('doctors'));
+}
+public function doctors(){
+    $medic =Doctor::all();
+    return view('doctors',compact('medic'));
+}
+public function news(){
+
+    return view('news');
+}
+
 
 
 }

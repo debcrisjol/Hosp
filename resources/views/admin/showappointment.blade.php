@@ -26,11 +26,14 @@
 
        @include('admin.navbar')
        <div class="container-fluid page-body-wrapper">
+       <div class="d-flex flex-column">
 
-        <div class="container" style="font-size: smaller" >
-            <!-- partial -->
 
-        <table >
+              <h2 class="card-title mt-3">Appointments</h2>
+
+                <table >
+
+
 
                     <thead>
                       <tr class="table-active">
@@ -68,17 +71,11 @@
                     </tbody>
 
 
-
-
                   </table>
+              </div>
+</div>
 
 
-        </div>
-
-
-
-      <!-- page-body-wrapper ends -->
-    </div>
 @include('admin.script')
   </body>
 </html>

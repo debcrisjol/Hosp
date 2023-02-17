@@ -17,9 +17,9 @@
           <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
             <select name="doctor" id="departement" class="custom-select">
 <option>Select Doctor</option>
-                @foreach ($doctor as $doctors)
-              <option value="{{$doctors->name}}">
-                {{$doctors->name}} |  Speciality: {{$doctors->speciality}}</option>
+                @foreach ($doctors as $doctor)
+              <option value="{{$doctor->name}}">
+                {{$doctor->name}} |  Speciality: {{$doctor->speciality}}</option>
 
 
               @endforeach
@@ -35,6 +35,6 @@
 
         <button type="submit" class="btn btn-primary mt-3 wow zoomIn ">Submit Request</button>
       </form>
-    
+
     </div>
   </div> <!-- .page-section -->
