@@ -3,7 +3,7 @@
     <div class="container text-center wow fadeInUp">
       <nav aria-label="Breadcrumb">
         <ol class="breadcrumb breadcrumb-dark bg-transparent  mt-2">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
 
         </ol>
       </nav>

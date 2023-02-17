@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{{ url('/home') }}">Home</a>
             </li>
 
             <li class="nav-item">
@@ -60,14 +60,20 @@
 
                 <div class="flex-center position-ref full-height">
                     @if (Route::has('login'))
-                        <div class="top-right links m-2">
+                        <div class="top-right links m-2 d-flex g-2">
                             @auth
-                                <a class="p-2 rounded bg-success " href="#">Home</a>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                              document.getElementById('logout-form').submit();">
-                                 {{ __('Logout') }}
-                             </a>
+                                <a class="p-2 rounded bg-success " href="{{ url('/home') }}">Home</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
                             @else
                                 <a class="p-2 rounded bg-success " href="{{ route('login') }}">Login</a>
 
